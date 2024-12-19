@@ -28,7 +28,7 @@ services:
 
   celery:
     build: .
-    command: celery -A employee_management worker --loglevel=info
+    command: celery -A HRM worker --loglevel=info
     volumes:
       - .:/code
     depends_on:
@@ -37,7 +37,7 @@ services:
 
   celery-beat:
     build: .
-    command: celery -A employee_management beat --loglevel=info
+    command: celery -A HRM beat --loglevel=info
     volumes:
       - .:/code
     depends_on:

@@ -86,14 +86,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('POSTGRES_DB', 'employeedb'),
-        'USER': os.getenv('POSTGRES_USER', 'user'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'password'),
-        'HOST': os.getenv('POSTGRES_HOST', 'db'),  # Docker service name
-        'PORT': os.getenv('POSTGRES_PORT', '5432'),  # Default PostgreSQL port
+        'USER': os.getenv('POSTGRES_USER', 'postgres'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'mysecretpassword'),
+        'HOST': os.getenv('POSTGRES_HOST', 'localhost'),  # Docker service name
+        'PORT': os.getenv('POSTGRES_PORT', '5431'),  # Default PostgreSQL port
     }
 }
 
-
+print(DATABASES)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
